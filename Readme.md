@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Никита Пыленок](https://up.htmlacademy.ru/adaptive-individual/1/user/2362145).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Данюши](https://htmlacademy.ru/profile/id225742).
 
 ---
 
