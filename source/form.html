@@ -55,23 +55,23 @@
             </label>
             <label class="form__label">
               <span class="form__text">Возраст (лет):</span>
-              <input class="form__text-input" type="text" name="age" placeholder="7">
+              <input class="form__text-input" type="number" name="age" placeholder="7">
             </label>
           </fieldset>
           <fieldset class="form__field">
             <legend class="visually-hidden">Выбор данных для анкеты.</legend>
             <label class="form__label">
-              <input class="visually-hidden form__radio-input" name="weight loss" type="radio" checked>
+              <input class="visually-hidden form__radio-input" name="program" value="weight-loss" type="radio" checked>
               <span class="form__radio-mark"></span>
               <span class="form__radio-text">Похудение</span>
             </label>
             <label class="form__label">
-              <input class="visually-hidden form__radio-input" name="weight gain" type="radio">
+              <input class="visually-hidden form__radio-input" name="program" tvalue="weight-gain" ype="radio">
               <span class="form__radio-mark"></span>
               <span class="form__radio-text">Набор массы</span>
             </label>
             <label class="form__label">
-              <input class="visually-hidden form__radio-input" name="i don't know" type="radio">
+              <input class="visually-hidden form__radio-input" name="program" value="need-advice" type="radio">
               <span class="form__radio-mark"></span>
               <span class="form__radio-text">Не знаю (Нужен ваш совет)</span>
             </label>
@@ -100,21 +100,21 @@
           <ul class="form-list">
             <li class="form-list__item">
               <label class="form-list__label">
-                <input class="form-list__checkbox-input" type="checkbox" name="sweetener" checked>
+                <input class="form-list__checkbox-input visually-hidden" type="checkbox" name="sweetener" checked>
                 <span class="form-list__mark"></span>
                 <span class="visually-hidden form-list__text">Сахарозаменитель</span>
               </label>
             </li>
             <li class="form-list__item">
               <label class="form-list__label">
-                <input class="form-list__checkbox-input" type="checkbox" name="milk">
+                <input class="form-list__checkbox-input visually-hidden" type="checkbox" name="milk">
                 <span class="form-list__mark"></span>
                 <span class="visually-hidden form-list__text">Молоко</span>
               </label>
             </li>
             <li class="form-list__item">
               <label class="form-list__label">
-                <input class="form-list__checkbox" type="checkbox" name="drinking water">
+                <input class="form-list__checkbox visually-hidden" type="checkbox" name="drinking water">
                 <span class="form-list__mark"></span>
                 <span class="visually-hidden form-list__text">Питьева вода</span>
               </label>
@@ -128,8 +128,8 @@
             </li>
           </ul>
         </fieldset>
-        <div class="selection-container__button">
-          <button class="selection-container__submit button" type="submit">Отправить заявку</button>
+        <div class="form__button-container">
+          <button class="form__button button" type="submit">Отправить заявку</button>
         </div>
         <div class="selection-container__small">
           <small class="selection-container__legend">
@@ -146,8 +146,8 @@
       </div>
       <div class="contacts__map">
         <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab62959ef667241e2b293ed09d29722cf3b560fbfff6b78a7dd03882ffb35ea41&amp;source=constructor"
-        width="1440" height="400"></iframe>
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab62959ef667241e2b293ed09d29722cf3b560fbfff6b78a7dd03882ffb35ea41&amp;source=constructor"
+          width="1440" height="400"></iframe>
       </div>
     </section>
   </main>
