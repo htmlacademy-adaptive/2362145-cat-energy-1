@@ -1,0 +1,49 @@
+.advantages__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.advantages__item {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  list-style-type: none;
+}
+
+.advantages__item::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: @primary-color;
+}
+
+.advantages__item--leaf::before {
+  background-image: url("../../img/icon_leaf.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--hot::before {
+  background-image: url("../../img/icon_hot.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--eat::before {
+  background-image: url("../../img/icon_eat.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--time::before {
+  background-image: url("../../img/icon_time.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
