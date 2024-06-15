@@ -1,8 +1,18 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
 .hero__description {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 27px;
+  padding-bottom: 25px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .hero__slogan {
@@ -11,6 +21,12 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  padding-bottom: 29px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero__main-button {
@@ -21,10 +37,16 @@
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
+  position: relative;
+  z-index: 1;
+  padding-block: 10px;
+  margin-inline: 20px;
 }
 
 .hero__wrapper--with-background {
   background-color: rgba(104, 183, 56, 0.85);
+  position: absolute;
+  top: 0;
 }
 
 .hero__background-image {
