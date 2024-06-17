@@ -3,13 +3,12 @@
   margin: 0;
 }
 
-.navigation__item:first-child {
-  border-top: 1px solid @border-color;
-}
-
 .navigation__item {
-  .list-style-reset ();
+  &:first-child {
+    border-top: 1px solid @border-color;
+  }
   border-bottom: 1px solid @border-color;
+  .list-style-reset ();
   text-align: center;
 }
 
