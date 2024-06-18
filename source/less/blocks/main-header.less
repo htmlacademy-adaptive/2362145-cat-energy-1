@@ -1,0 +1,24 @@
+.navigation__list {
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__item {
+  &:first-child {
+    border-top: 1px solid @border-color;
+  }
+  border-bottom: 1px solid @border-color;
+  .list-style-reset ();
+  text-align: center;
+}
+
+.navigation__link {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @basic-black;
+  display: block;
+  padding-block: 22px;
+}
