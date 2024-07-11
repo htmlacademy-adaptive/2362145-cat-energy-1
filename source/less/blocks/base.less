@@ -1,15 +1,6 @@
-@primary-color: #68B738;
-@basic-black: #000000;
-@basic-white: #ffffff;
-@basic-grey: #f2f2f2;
-@special-grey: #cdcdcd;
-@border-color: #ebebeb;
-@special-grey-2: #d9d9d9;
-@special-grey-3: #eaeaea;
-@special-grey-4: #e7e7e7;
-@special-dark-grey: #444444;
-@special-dark-grey-2: #222222;
-@special-dark-grey-3: #111111;
+@mobile-width: 320px;
+@tablet-width: 768px;
+@desktop-width: 1440px;
 
 .page {
   height: 100%;
@@ -17,10 +8,18 @@
 }
 
 .page__body {
-  width: 320px;
-  font-weight: 400;
   .centered ();
   .stiky-footer ();
+  width: @mobile-width;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+  font-weight: 400;
 }
 
 .centered {
@@ -38,8 +37,14 @@
   min-height: 100%;
 }
 
-.main {
-  flex-grow: 1;
+img {
+  display: block;
+  margin: 0;
+}
+
+svg {
+  display: block;
+  margin: 0;
 }
 
 .button {
@@ -66,16 +71,6 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.main__title {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 100%;
-  margin: 0;
-  margin-top: 27px;
-  text-align: center;
 }
 
 .list-style-reset {

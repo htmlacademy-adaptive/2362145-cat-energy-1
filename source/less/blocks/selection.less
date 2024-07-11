@@ -1,14 +1,48 @@
+.selection {
+  @media (min-width: @desktop-width) {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+}
+
 .selection__list {
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .selection__item {
-  background-color: @basic-grey;
   .list-style-reset ();
+  background-color: @basic-grey;
   margin: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px;
+    padding-right: 316px;
+    margin: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 61px;
+    margin: 0;
+  }
 }
 
 .selection__title {
@@ -21,6 +55,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 100%;
+    margin-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 49px;
+  }
 }
 
 .selection__title::before {
@@ -29,20 +73,57 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    position: absolute;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+  }
 }
 
 .selection__title--slim::before {
   width: 50px;
   height: 53px;
   margin-right: 20px;
-  background-image: url("../../source/img/cat-weight-loss_mobile.svg");
+  background-image: url("../../img/cat-weight-loss_mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    top: 81px;
+    right: 63px;
+    width: 200px;
+    height: 211px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 106px;
+  }
 }
 
 .selection__title--weight::before {
   width: 67px;
   height: 50px;
   margin-right: 11px;
-  background-image: url("../../source/img/cat-weight-gain_mobile.svg");
+  background-image: url("../../img/cat-weight-gain_mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    top: 91px;
+    right: 29px;
+    width: 268px;
+    height: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    right: 0;
+    width: 134px;
+    height: 100px;
+  }
 }
 
 .selection__text {
@@ -52,6 +133,19 @@
   padding-top: 22px;
   padding-bottom: 23px;
   border-bottom: 1px solid @special-grey-2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 150%;
+    border: none;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 455px;
+  }
 }
 
 .selection__link {
@@ -61,4 +155,14 @@
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 150%;
+    padding-top: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
