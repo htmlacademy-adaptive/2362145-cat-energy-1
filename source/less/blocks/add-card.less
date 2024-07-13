@@ -1,10 +1,19 @@
 .add-card {
   padding: 25px 20px 24px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    background-color: @basic-white;
+    border: 2px solid @basic-grey;
+    justify-content: space-between;
+  }
 }
 
 .add-card__image {
   .centered ();
+  position: relative;
   margin-top: 25px;
 }
 
@@ -32,5 +41,7 @@
 .add-card__button {
   font-size: 16px;
   line-height: 125%;
-  width: 280px;
+  width: 100%;
+  color: @special-dark-grey;
+  background-color: @basic-grey;
 }

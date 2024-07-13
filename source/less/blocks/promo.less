@@ -1,9 +1,20 @@
 .promo {
   position: relative;
-  background-image: url("../../source/img/promo-background_mobile.jpg");
-  background-size: 100%;
+  background-image: url("../../img/promo-background_mobile.jpg");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   margin-top: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 70px;
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    margin-top: 0;
+    width: 245px;
+  }
 }
 
 .promo__image {
@@ -11,6 +22,16 @@
   padding-bottom: 46px;
   padding-left: 100px;
   padding-right: 100px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 60px;
+    padding-left: 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 56px 82px 0;
+  }
 }
 
 .promo__text {
@@ -23,4 +44,15 @@
   padding-left: 58px;
   padding-right: 61px;
   padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 164px;
+    padding-top: 70px;
+    padding-right: 125px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 46px 42px 43px;
+  }
 }
