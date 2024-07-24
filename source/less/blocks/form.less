@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: row;
   column-gap: 13px;
+  position: relative;
 }
 
 .form__text {
@@ -36,11 +37,33 @@
 }
 
 .form__input {
-  border: 1px solid @special-grey-4;
+  outline: 1px solid @special-grey-4;
+  border: none;
   flex-grow: 1;
   box-sizing: border-box;
   padding: 13px;
-  padding-left: 14px;
+  padding-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding: 11px;
+    padding-left: 20px;
+  }
+
+  &:hover {
+    outline: 1px solid @special-grey;
+  }
+
+  &:focus {
+    outline: 2px solid @special-dark-grey;
+  }
+}
+
+.form__input[type="email"] {
+  padding-right: 40px;
+}
+
+.form__input[type="tel"] {
+  padding-right: 40px;
 }
 
 .form__program-field {
@@ -50,6 +73,13 @@
   @media (min-width: @tablet-width) {
     padding: 23px 27px 27px;
     border: 1px solid @special-grey-4;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -194,3 +224,106 @@
     column-gap: 80px;
   }
 }
+
+.form__radio-mark {
+  width: 30px;
+  height: 30px;
+  border: 1px solid @special-grey;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__radio-input:hover + .form__radio-mark {
+  border-color: #bababa;
+}
+
+.form__radio-input:checked + .form__radio-mark::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 8.5px;
+  left: 8.5px;
+  border-radius: 50%;
+  background-color: @primary-color;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+  }
+}
+
+.form__radio-input:disabled + .form__radio-mark,
+.form__radio-input:disabled ~ .form__radio-text {
+  opacity: 0.3;
+}
+
+.form-list__label {
+  display: flex;
+  column-gap: 15px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 20px;
+  }
+}
+
+.form-list__mark {
+  width: 30px;
+  height: 30px;
+  display: block;
+  border: 1px solid @special-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form-list__input:checked + .form-list__mark::after {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 15px;
+  top: 7px;
+  left: 5.5px;
+  background-image: url("../img/input_cheked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    scale: 1.33;
+    top: 13px;
+    left: 11px;
+  }
+}
+// почему-то не работет так, как на 248 строке
+.form-list__input:disabled + .form-list__mark {
+  opacity: 0.3;
+}
+
+.form-list__input:disabled ~ .form-list__text {
+  opacity: 0.3;
+}
+
+.form-input-icon {
+  border: @basic-black;
+  position: absolute;
+  top: 15px;
+  right: 17.5px;
+
+  @media (min-width: @tablet-width) {
+    top: 19.5px;
+  }
+}
+
+.form__input:focus + .form-input-icon {
+  stroke: @primary-color;
+}
+

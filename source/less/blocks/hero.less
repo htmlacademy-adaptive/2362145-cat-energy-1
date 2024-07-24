@@ -28,7 +28,7 @@
   z-index: 1;
 
   @media (min-width: @tablet-width) {
-    color: #000000;
+    color: @basic-black;
     font-size: 60px;
     padding-top: 0;
     padding-bottom: 40px;
@@ -54,7 +54,7 @@
   z-index: 1;
 
   @media (min-width: @tablet-width) {
-    color: #000000;
+    color: @basic-black;
     font-size: 20px;
     padding-bottom: 21px;
     text-align: left;
@@ -87,7 +87,8 @@
 }
 
 .hero__wrapper-with-background {
-  background-color: rgba(104, 183, 56, 0.85);
+  width: 100%;
+  background-color: @transparet-primary-color;
   position: absolute;
   top: 0;
 
@@ -98,30 +99,34 @@
   @media (min-width: @desktop-width) {
     display: block;
     right: 0;
+    left: 720px;
     top: 0;
     height: 694px;
-    width: 720px;
+    width: auto;
   }
 }
 
 .hero__background-image {
   display: block;
-  width: 320px;
+  width: 100%;
   height: 302px;
-  background-image: url("../../img/hero-background-cat_mobile.jpg");
+  background-image: url("../img/hero-background-cat_mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 50%;
   margin: 0;
   position: relative;
   z-index: -2;
 
   @media (min-width: @desktop-width) {
-    background-image: url("../../img/hero-background-cat.jpg");
-    width: 720px;
+    background-image: url("../img/hero-background-cat.jpg");
+    width: 100%;
     height: 694px;
   }
 }
 
 .hero__image {
-  background-image: url("../../img/index-can_mobile.png");
+  background-image: url("../img/index-can_mobile.png");
   width: 280px;
   height: 270px;
   margin: 0 auto;
@@ -129,7 +134,7 @@
   z-index: 1;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../../img/index-can_tablet.png");
+    background-image: url("../img/index-can_tablet.png");
     width: 709px;
     height: 609px;
     order: 1;
@@ -137,7 +142,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../../img/index-can_desktop.png");
+    background-image: url("../img/index-can_desktop.png");
     width: 552px;
     height: 499px;
     position: absolute;

@@ -10,15 +10,6 @@
 .page__body {
   .centered ();
   .stiky-footer ();
-  width: @mobile-width;
-
-  @media (min-width: @tablet-width) {
-    width: @tablet-width;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: @desktop-width;
-  }
   font-weight: 400;
 }
 
@@ -47,6 +38,10 @@ svg {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .button {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -58,6 +53,14 @@ svg {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+
+  &:hover {
+    background-color: darken(@primary-color, 3%);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .visually-hidden {
