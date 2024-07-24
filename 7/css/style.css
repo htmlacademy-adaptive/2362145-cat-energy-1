@@ -351,6 +351,11 @@ svg {
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .navigation.navigation--nojs {
+    position: static;
+  }
+}
 .hero {
   position: relative;
   display: flex;
@@ -701,7 +706,7 @@ svg {
   position: relative;
   display: flex;
   column-gap: 15px;
-  width: 40%;
+  width: 50%;
 }
 @media (min-width: 768px) {
   .selection__link {
