@@ -43,7 +43,8 @@
 }
 
 .main-header__toggle--opened {
-  &::after {
+  &::after,
+  &::before {
     content: "";
     position: absolute;
     width: 25px;
@@ -55,13 +56,6 @@
   }
 
   &::before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 2px;
-    background-color: @basic-black;
-    top: 17px;
-    left: 3px;
     rotate: -45deg;
   }
 }
@@ -77,4 +71,8 @@
     top: 11px;
     left: 3px;
   }
+}
+
+.main-header__toggle--nojs {
+  display: none;
 }
