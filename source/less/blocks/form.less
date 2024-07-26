@@ -45,6 +45,7 @@
   box-sizing: border-box;
   padding: 13px;
   padding-left: 15px;
+  background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
     padding: 11px;
@@ -332,6 +333,8 @@
 
 .form__input.form__input--invalid,
 .form__input.form__input--invalid + .form-input-icon {
+  // если просто outline задать, то и у иконки он появляется
   outline-color: #ff8282;
+  outline-width: 2px;
   stroke: #ff8282;
 }
