@@ -3,8 +3,10 @@
   flex-direction: column;
   row-gap: 14px;
   border: none;
-  margin: 0 -20px;
-  padding: 0 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-bottom: 1px solid @special-grey-2;
   padding-bottom: 24px;
 
@@ -42,10 +44,11 @@
   outline: 1px solid @special-grey-4;
   border: none;
   flex-grow: 1;
-  box-sizing: border-box;
   padding: 13px;
   padding-left: 15px;
   background-color: @basic-white;
+  // фиксированная ширина что-бы убрать минимальную внутреннюю ширину 165px
+  width: 173px;
 
   @media (min-width: @tablet-width) {
     padding: 11px;
@@ -273,6 +276,7 @@
 
 .form-list__label {
   display: flex;
+  max-width: 100%;
   column-gap: 15px;
   position: relative;
 
@@ -334,7 +338,7 @@
 .form__input.form__input--invalid,
 .form__input.form__input--invalid + .form-input-icon {
   // если просто outline задать, то и у иконки он появляется
-  outline-color: #ff8282;
   outline-width: 2px;
+  outline-color: #ff8282;
   stroke: #ff8282;
 }

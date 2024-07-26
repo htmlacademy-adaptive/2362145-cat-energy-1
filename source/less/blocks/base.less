@@ -102,6 +102,10 @@ svg {
     padding: 0 40px;
     font-size: 36px;
     line-height: 100%;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -112,13 +116,13 @@ svg {
   background-color: @primary-color;
   width: calc(100vw - 40px);
   left: 40px;
-  bottom: 7px;
+  top: 16px;
   transform: translateZ(-1px);
 
   @media (min-width: @tablet-width) {
     width: 100vw;
     left: -30px;
-    bottom: 12.5px;
+    top: 22px;
   }
 
   @media (min-width: @desktop-width) {
