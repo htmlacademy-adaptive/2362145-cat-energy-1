@@ -3,14 +3,18 @@
   flex-direction: column;
   row-gap: 14px;
   border: none;
-  margin: 0;
-  padding: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-bottom: 1px solid @special-grey-2;
   padding-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     border-bottom: none;
     padding: 0;
+    margin: 0;
+    row-gap: 20px;
   }
 }
 
@@ -18,6 +22,7 @@
   display: flex;
   flex-direction: row;
   column-gap: 13px;
+  position: relative;
 }
 
 .form__text {
@@ -36,11 +41,36 @@
 }
 
 .form__input {
-  border: 1px solid @special-grey-4;
+  outline: 1px solid @special-grey-4;
+  border: none;
   flex-grow: 1;
-  box-sizing: border-box;
   padding: 13px;
-  padding-left: 14px;
+  padding-left: 15px;
+  background-color: @basic-white;
+  // фиксированная ширина что-бы убрать минимальную внутреннюю ширину 165px
+  width: 173px;
+
+  @media (min-width: @tablet-width) {
+    padding: 11px;
+    padding-left: 20px;
+  }
+
+  &:hover {
+    outline: 1px solid @special-grey;
+  }
+
+  &:focus {
+    outline: 2px solid @special-dark-grey;
+  }
+}
+
+.form__input[type="email"] {
+  padding-right: 40px;
+}
+
+
+.form__input[type="tel"] {
+  padding-right: 40px;
 }
 
 .form__program-field {
@@ -51,12 +81,20 @@
     padding: 23px 27px 27px;
     border: 1px solid @special-grey-4;
   }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+    padding: 25px 28px;
+  }
 }
 
 .form__textarea-input {
   border: 1px solid @special-grey-4;
   padding: 14px;
   width: 100%;
+  white-space: wrap;
 }
 
 .form-list {
@@ -76,6 +114,7 @@
 .form__contacts-field {
   border: none;
   padding: 0;
+  margin: 0;
 
   @media (min-width: @desktop-width) {
     display: grid;
@@ -86,6 +125,7 @@
 
 .form__additional-field {
   padding: 0;
+  margin: 0;
   border: none;
 }
 
@@ -193,4 +233,112 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
   }
+}
+
+.form__radio-mark {
+  width: 30px;
+  height: 30px;
+  border: 1px solid @special-grey;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form__radio-input:hover + .form__radio-mark {
+  border-color: #bababa;
+}
+
+.form__radio-input:checked + .form__radio-mark::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 8.5px;
+  left: 8.5px;
+  border-radius: 50%;
+  background-color: @primary-color;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+  }
+}
+
+.form__radio-input:disabled + .form__radio-mark,
+.form__radio-input:disabled ~ .form__radio-text {
+  opacity: 0.3;
+}
+
+.form-list__label {
+  display: flex;
+  max-width: 100%;
+  column-gap: 15px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 20px;
+  }
+}
+
+.form-list__mark {
+  width: 30px;
+  height: 30px;
+  display: block;
+  border: 1px solid @special-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form-list__input:checked + .form-list__mark::after {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 15px;
+  top: 7px;
+  left: 5.5px;
+  background-image: url("../img/input_cheked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    scale: 1.33;
+    top: 13px;
+    left: 11px;
+  }
+}
+
+.form-list__input:disabled + .form-list__mark,
+.form-list__input:disabled ~ .form-list__text {
+  opacity: 0.3;
+}
+
+.form-input-icon {
+  border: @basic-black;
+  position: absolute;
+  top: 15px;
+  right: 17.5px;
+
+  @media (min-width: @tablet-width) {
+    top: 19.5px;
+  }
+}
+
+.form__input.form__input--valid + .form-input-icon {
+  stroke: @primary-color;
+}
+
+.form__input.form__input--invalid,
+.form__input.form__input--invalid + .form-input-icon {
+  // если просто outline задать, то и у иконки он появляется
+  outline-width: 2px;
+  outline-color: #ff8282;
+  stroke: #ff8282;
 }

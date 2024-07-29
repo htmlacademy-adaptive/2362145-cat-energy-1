@@ -1,17 +1,17 @@
 .main-header {
-  z-index: 1;
+  position: relative;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    column-gap: 20px;
     justify-content: space-between;
-    width: 708px;
     margin-top: 25px;
     margin-left: 30px;
     margin-right: 34px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
     margin-top: 55px;
     margin-left: 110px;
     margin-right: 110px;
@@ -20,7 +20,59 @@
 }
 
 .main-header__toggle {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-header__toggle--opened {
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: @basic-black;
+    top: 17px;
+    left: 3px;
+    rotate: 45deg;
+  }
+
+  &::before {
+    rotate: -45deg;
+  }
+}
+
+.main-header__toggle--closed {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: @basic-black;
+    box-shadow: 0 6px 0 0 @basic-black, 0 12px 0 0 @basic-black;
+    top: 11px;
+    left: 3px;
+  }
+}
+
+.main-header__toggle--nojs {
+  display: none;
 }

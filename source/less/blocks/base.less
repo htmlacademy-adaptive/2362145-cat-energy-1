@@ -10,16 +10,8 @@
 .page__body {
   .centered ();
   .stiky-footer ();
-  width: @mobile-width;
-
-  @media (min-width: @tablet-width) {
-    width: @tablet-width;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: @desktop-width;
-  }
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 .centered {
@@ -47,6 +39,10 @@ svg {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .button {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -58,6 +54,14 @@ svg {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+
+  &:hover {
+    background-color: darken(@primary-color, 3%);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .visually-hidden {
@@ -77,4 +81,52 @@ svg {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.section-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 108%;
+  font-weight: 400;
+  color: @basic-black;
+  position: relative;
+  display: flex;
+  width: max-content;
+  background-color: @basic-white;
+  margin: 0 -20px;
+  padding: 0 20px;
+  transform-style: preserve-3d;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 -40px;
+    padding: 0 40px;
+    font-size: 36px;
+    line-height: 100%;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.section-title--line::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: @primary-color;
+  width: calc(100vw - 40px);
+  left: 40px;
+  top: 16px;
+  transform: translateZ(-1px);
+
+  @media (min-width: @tablet-width) {
+    width: 100vw;
+    left: -30px;
+    top: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100vw;
+    left: -70px;
+  }
 }

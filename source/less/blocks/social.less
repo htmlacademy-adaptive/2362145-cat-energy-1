@@ -14,3 +14,23 @@
 .social__item {
   list-style-type: none;
 }
+
+.social__link:focus {
+  .social__svg {
+    fill: @primary-color;
+  }
+}
+
+.social__svg {
+  display: block;
+  fill: #666666;
+
+  &:hover,
+  &:focus {
+    fill: @primary-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
