@@ -1,16 +1,19 @@
 .product-card {
   padding: 20px;
   padding-bottom: 25px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 40px;
     padding-left: 37px;
     padding-right: 37px;
+    padding-top: 161px;
     align-self: end;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 245px;
+    padding-top: 151px;
   }
 }
 
@@ -21,7 +24,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: column;
     position: relative;
-    margin-bottom: 32px;
+    display: contents;
   }
 }
 
@@ -30,7 +33,11 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
+    position: absolute;
+    top: -71px;
+    left: 0;
+    right: 0;
+    width: auto;
     height: 210px;
   }
 }
@@ -47,6 +54,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 32px;
   }
 }
 
