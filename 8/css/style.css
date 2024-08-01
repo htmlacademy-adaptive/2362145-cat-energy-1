@@ -71,7 +71,8 @@ svg {
   padding: 10px;
   text-align: center;
 }
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: #61ab34;
 }
 .button:active {
@@ -785,11 +786,13 @@ svg {
     padding: 0;
   }
 }
-.selection__link:hover .selection__link-decoration {
+.selection__link:hover .selection__link-decoration,
+.selection__link:focus .selection__link-decoration {
   transition: 0.3s;
   width: 26px;
 }
-.selection__link:hover .selection__link-decoration::after {
+.selection__link:hover .selection__link-decoration::after,
+.selection__link:focus .selection__link-decoration::after {
   transition: 0.3s;
   left: 26px;
 }
@@ -1568,7 +1571,8 @@ svg {
   color: #444444;
   background-color: #f2f2f2;
 }
-.add-card__button:hover {
+.add-card__button:hover,
+.add-card__button:focus {
   background-color: #eaeaea;
 }
 .add-card__button:active {
@@ -2096,7 +2100,10 @@ svg {
     height: 40px;
   }
 }
-.form__radio-input:hover + .form__radio-mark {
+.form__radio-input:hover + .form__radio-mark,
+.form__radio-input:focus + .form__radio-mark,
+.form__list-input:hover + .form__list-mark,
+.form__list-input:focus + .form__list-mark {
   border-color: #bababa;
 }
 .form__radio-input:checked + .form__radio-mark::after {
@@ -2132,19 +2139,19 @@ svg {
     column-gap: 20px;
   }
 }
-.form-list__mark {
+.form__list-mark {
   width: 30px;
   height: 30px;
   display: block;
   border: 1px solid #cdcdcd;
 }
 @media (min-width: 768px) {
-  .form-list__mark {
+  .form__list-mark {
     width: 40px;
     height: 40px;
   }
 }
-.form-list__input:checked + .form-list__mark::after {
+.form__list-input:checked + .form__list-mark::after {
   content: "";
   position: absolute;
   width: 19px;
@@ -2156,14 +2163,14 @@ svg {
   background-position: center;
 }
 @media (min-width: 768px) {
-  .form-list__input:checked + .form-list__mark::after {
-    scale: 1.33;
+  .form__list-input:checked + .form__list-mark::after {
+    scale: 1.26;
     top: 13px;
     left: 11px;
   }
 }
-.form-list__input:disabled + .form-list__mark,
-.form-list__input:disabled ~ .form-list__text {
+.form__list-input:disabled + .form-list__mark,
+.form__list-input:disabled ~ .form-list__text {
   opacity: 0.3;
 }
 .form-input-icon {
