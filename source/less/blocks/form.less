@@ -247,7 +247,10 @@
   }
 }
 
-.form__radio-input:hover + .form__radio-mark {
+.form__radio-input:hover + .form__radio-mark,
+.form__radio-input:focus + .form__radio-mark,
+.form__list-input:hover + .form__list-mark,
+.form__list-input:focus + .form__list-mark {
   border-color: #bababa;
 }
 
@@ -285,7 +288,7 @@
   }
 }
 
-.form-list__mark {
+.form__list-mark {
   width: 30px;
   height: 30px;
   display: block;
@@ -297,7 +300,7 @@
   }
 }
 
-.form-list__input:checked + .form-list__mark::after {
+.form__list-input:checked + .form__list-mark::after {
   content: "";
   position: absolute;
   width: 19px;
@@ -309,14 +312,14 @@
   background-position: center;
 
   @media (min-width: @tablet-width) {
-    scale: 1.33;
+    scale: 1.26;
     top: 13px;
     left: 11px;
   }
 }
 
-.form-list__input:disabled + .form-list__mark,
-.form-list__input:disabled ~ .form-list__text {
+.form__list-input:disabled + .form-list__mark,
+.form__list-input:disabled ~ .form-list__text {
   opacity: 0.3;
 }
 
