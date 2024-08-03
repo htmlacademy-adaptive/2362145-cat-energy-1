@@ -20,7 +20,7 @@
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo__icon-img_desktop.svg 1x" width="70" height="59">
           <source media="(min-width: 768px)" srcset="img/logo__icon-img_tablet.svg 1x" width="60" height="50">
-          <img class="logo__icon-img" src="img/logo__icon-img_mobile.svg" width="33" height="38">
+          <img class="logo__icon-img" src="img/logo__icon-img_mobile.svg" width="33" height="38" alt="Логотип компании">
         </picture>
         <img class="logo__icon-text" width="101" height="18" src="img/logo-text.svg" alt="Текстовый логотип">
       </a>
@@ -53,22 +53,16 @@
         Подобрать программу
       </a>
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/index-can_desktop.png 1x, img/index-can_desktop@2x.png 2x"
+        <source media="(min-width: 1440px)" srcset="img/hero/index-can_desktop.png 1x, img/hero/index-can_desktop@2x.png 2x"
           width="552" height="499">
-        <source media="(min-width: 768px)" srcset="img/index-can_tablet.png 1x, img/index-can_tablet@2x.png 2x"
+        <source media="(min-width: 768px)" srcset="img/hero/index-can_tablet.png 1x, img/hero/index-can_tablet@2x.png 2x"
           width="709" height="609">
-        <img class="hero__image" srcset="img/index-can_mobile.png 1x, img/index-can_mobile@2x.png 2x" width="280" height="270"
-          alt="Пачка фирменного корма">
+        <img class="hero__image" srcset="img/hero/index-can_mobile.png 1x, img/hero/index-can_mobile@2x.png 2x" width="280"
+          height="270" alt="Пачка фирменного корма">
       </picture>
       <div class="hero__wrapper-with-background">
-        <picture>
-          <source media="(min-width: 1440px)"
-            srcset="img/hero-background-cat_desktop.jpg 1x, img/hero-background-cat_desktop@2x.jpg 2x" width="1040" height="694">
-          <img class="hero__background-image" src="img/hero-background-cat_mobile.jpg"
-            srcset="img/hero-background-cat-mobile@2x.jpg 2x" width="320" height="302" alt="Облизывающийся котик">
-        </picture>
+        <div class="hero__background-image"></div>
       </div>
-
     </section>
     <section class="selection">
       <h2 class="visually-hidden">Предлагаемые программы питания</h2>
@@ -151,16 +145,22 @@
         <div class="slider">
           <div class="slider__picture slider__picture--before">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/slider-picture-before_tablet@1x.png 1x, img/slider-picture-before_tablet@2x.png 2x" width="560" height="512">
-              <img class="slider__image slider__image--fat" src="img/slider-picture-before_mobile@1x.png" srcset="img/slider-picture-before_mobile@2x.png 2x"
-              width="280" height="256" alt="До нашего питания, упитанный котик.">
+              <source media="(min-width: 768px)"
+                srcset="img/slider/slider-picture-before_tablet@1x.png 1x, img/slider/slider-picture-before_tablet@2x.png 2x"
+                width="560" height="512">
+              <img class="slider__image slider__image--fat" src="img/slider/slider-picture-before_mobile@1x.png"
+                srcset="img/slider/slider-picture-before_mobile@2x.png 2x" width="280" height="256"
+                alt="До нашего питания, упитанный котик.">
             </picture>
           </div>
           <div class="slider__picture slider__picture--after">
             <picture>
-              <source media="(min-width: 768px)" srcset="img/slider-picture-after_tablet@1x.png 1x, img/slider-picture-after_tablet@2x.png 2x" width="560" height="512">
-              <img class="slider__image slider__image--slim" src="img/slider-picture-after_mobile@1x.png" srcset="img/slider-picture-after_mobile@2x.png 2x"
-              width="280" height="256" alt="Результат питания, худенький котик.">
+              <source media="(min-width: 768px)"
+                srcset="img/slider/slider-picture-after_tablet@1x.png 1x, img/slider/slider-picture-after_tablet@2x.png 2x"
+                width="560" height="512">
+              <img class="slider__image slider__image--slim" src="img/slider/slider-picture-after_mobile@1x.png"
+                srcset="img/slider/slider-picture-after_mobile@2x.png 2x" width="280" height="256"
+                alt="Результат питания, худенький котик.">
             </picture>
           </div>
           <div class="slider-range">
