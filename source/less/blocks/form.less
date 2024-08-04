@@ -49,6 +49,10 @@
   background-color: @basic-white;
   // фиксированная ширина что-бы убрать минимальную внутреннюю ширину 165px
   width: 173px;
+  // отключение кнопок input type="number" в firefox
+  /* stylelint-disable-next-line */
+  -moz-appearance: textfield;
+
 
   @media (min-width: @tablet-width) {
     padding: 11px;
