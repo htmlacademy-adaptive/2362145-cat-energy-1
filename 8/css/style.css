@@ -1922,6 +1922,8 @@ svg {
   padding-left: 15px;
   background-color: #ffffff;
   width: 173px;
+  /* stylelint-disable-next-line */
+  -moz-appearance: textfield;
 }
 @media (min-width: 768px) {
   .form__input {
