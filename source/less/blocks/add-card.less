@@ -3,11 +3,11 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
     background-color: @basic-white;
     border: 2px solid @basic-grey;
-    justify-content: space-between;
   }
 }
 
@@ -15,6 +15,17 @@
   .centered ();
   position: relative;
   margin-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .add-card__title {
@@ -24,8 +35,7 @@
   text-transform: uppercase;
   text-align: center;
   color: @special-dark-grey-3;
-  margin-top: 53px;
-  margin-bottom: 8px;
+  margin: 0;
 }
 
 .add-card__description {
@@ -35,7 +45,19 @@
   text-align: center;
   color: @special-dark-grey;
   margin: 0;
+}
+
+.add-card__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-top: 53px;
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    row-gap: 23px;
+    margin-bottom: auto;
+  }
 }
 
 .add-card__button {
@@ -45,7 +67,8 @@
   color: @special-dark-grey;
   background-color: @basic-grey;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: darken(@basic-grey, 3%);
   }
 

@@ -4,6 +4,16 @@
     z-index: 2;
     width: 100%;
   }
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
+}
+
+.navigation--on-index {
+  @media (min-width: @desktop-width) {
+    margin-left: 510px;
+  }
 }
 
 .navigation__list {
@@ -13,7 +23,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-left: auto;
   }
 }
 
