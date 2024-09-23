@@ -78,6 +78,12 @@
         Подобрать программу
       </a>
       <picture>
+        <source media="(min-width: 1440px)" type="image/webp"
+          srcset="img/hero/index-can_desktop.webp 1x, img/hero/index-can_desktop@2x.webp 2x" width="552" height="499">
+        <source media="(min-width: 768px)" type="image/webp"
+          srcset="img/hero/index-can_tablet.webp 1x, img/hero/index-can_tablet@2x.webp 2x" width="709" height="609">
+        <source type="image/webp" srcset="img/hero/index-can_mobile.webp 1x, img/hero/index-can_mobile@2x.webp 2x"
+          width="280" height="270">
         <source media="(min-width: 1440px)"
           srcset="img/hero/index-can_desktop.png 1x, img/hero/index-can_desktop@2x.png 2x" width="552" height="499">
         <source media="(min-width: 768px)"
@@ -170,6 +176,12 @@
         <div class="slider">
           <div class="slider__picture slider__picture--before">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/slider/slider-picture-before_tablet@1x.webp 1x, img/slider/slider-picture-before_tablet@2x.webp 2x"
+                width="560" height="512">
+              <source type="image/webp"
+                srcset="img/slider/slider-picture-before_mobile@1x.webp 1x, img/slider/slider-picture-before_mobile@2x.webp 2x"
+                width="280" height="256" alt="До нашего питания, упитанный котик.">
               <source media="(min-width: 768px)"
                 srcset="img/slider/slider-picture-before_tablet@1x.png 1x, img/slider/slider-picture-before_tablet@2x.png 2x"
                 width="560" height="512">
@@ -180,6 +192,12 @@
           </div>
           <div class="slider__picture slider__picture--after">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/slider/slider-picture-after_tablet@1x.webp 1x, img/slider/slider-picture-after_tablet@2x.webp 2x"
+                width="560" height="512">
+              <source type="image/webp"
+                srcset="img/slider/slider-picture-after_mobile@1x.webp 1x, img/slider/slider-picture-after_mobile@2x.webp 2x"
+                width="280" height="256" alt="Результат питания, худенький котик.">
               <source media="(min-width: 768px)"
                 srcset="img/slider/slider-picture-after_tablet@1x.png 1x, img/slider/slider-picture-after_tablet@2x.png 2x"
                 width="560" height="512">
@@ -189,8 +207,13 @@
             </picture>
           </div>
           <div class="slider-range">
-            <button class="slider-range__button" type="button"><span class="visually-hidden">Кнопка переключения
-                слайдера.</span></button>
+            <button class="slider-range__button" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" fill="none" viewBox="0 0 24 18">
+                <path fill="#666" d="M8 0 0 9l8 9V0ZM24 9l-8-9v18l8-9Z" />
+              </svg>
+              <span class="visually-hidden">Кнопка переключения
+                слайдера.</span>
+            </button>
           </div>
         </div>
       </div>
@@ -198,8 +221,8 @@
     <section class="contacts">
       <h2 class="visually-hidden">Наш адрес.</h2>
       <div class="contacts__location">
-        <p class="contacts__text">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <p class="contacts__text">Приглашаем<br>к сотрудничеству дилеров!</p>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</address>
       </div>
       <iframe class="contacts__map map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625719791!2d30.32047247694084!3d59.93871916209402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1721517098673!5m2!1sru!2sru"

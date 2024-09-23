@@ -9,6 +9,7 @@
   padding-right: 20px;
   border-bottom: 1px solid @special-grey-2;
   padding-bottom: 24px;
+  padding-top: 0;
 
   @media (min-width: @tablet-width) {
     border-bottom: none;
@@ -23,6 +24,10 @@
   flex-direction: row;
   column-gap: 13px;
   position: relative;
+}
+
+.form__label--program-list {
+  column-gap: 20px;
 }
 
 .form__text {
@@ -45,7 +50,8 @@
   border: none;
   flex-grow: 1;
   padding: 13px;
-  padding-left: 15px;
+  padding-top: 13.5px;
+  padding-left: 14px;
   background-color: @basic-white;
   // фиксированная ширина что-бы убрать минимальную внутреннюю ширину 165px
   width: 173px;
@@ -84,6 +90,7 @@
   @media (min-width: @tablet-width) {
     padding: 23px 27px 27px;
     border: 1px solid @special-grey-4;
+    row-gap: 13px;
   }
 
   @media (min-width: @desktop-width) {
@@ -97,8 +104,15 @@
 .form__textarea-input {
   border: 1px solid @special-grey-4;
   padding: 14px;
+  padding-bottom: 7px;
   width: 100%;
   white-space: wrap;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 9px;
+    padding-left: 20px;
+    height: 175px;
+  }
 }
 
 .form-list {
@@ -150,6 +164,12 @@
   font-size: 16px;
   line-height: 125%;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding-block: 14px;
+    font-size: 20px;
+    line-height: 130%;
+  }
 }
 
 .form__head-container {
@@ -219,7 +239,7 @@
 
 .form__field-container--additional {
   padding-top: 34px;
-  padding-bottom: 34px;
+  padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     padding-top: 57px;
@@ -289,6 +309,11 @@
 
   @media (min-width: @tablet-width) {
     column-gap: 20px;
+    min-width: 344px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 325px;
   }
 }
 
@@ -330,16 +355,16 @@
 .form-input-icon {
   border: @basic-black;
   position: absolute;
-  top: 15px;
-  right: 17.5px;
+  top: 14px;
+  right: 14px;
 
   @media (min-width: @tablet-width) {
-    top: 19.5px;
+    top: 18px;
   }
 }
 
 .form__input.form__input--valid + .form-input-icon {
-  stroke: @primary-color;
+  color: @primary-color;
 }
 
 .form__input.form__input--invalid,
@@ -347,5 +372,5 @@
   // если просто outline задать, то и у иконки он появляется
   outline-width: 2px;
   outline-color: #ff8282;
-  stroke: #ff8282;
+  color: #ff8282;
 }
