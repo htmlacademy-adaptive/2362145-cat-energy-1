@@ -4,14 +4,33 @@
   height: 256px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    // направление на время, пока не сделаю слайдер
-    flex-direction: column;
+    height: 462px;
+    margin-top: 255px;
     background-color: @special-grey-3;
   }
 
   @media (min-width: @desktop-width) {
+    width: auto;
     background-color: none;
+    margin-top: 0;
+    margin-right: 110px;
+    margin-left: auto;
+  }
+}
+
+.slider__inner {
+  width: 280px;
+  margin-inline: auto;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 560px;
+    height: 512px;
+    top: -151px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -135px;
   }
 }
 
@@ -34,24 +53,61 @@
   }
 }
 
-.slider-range {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  z-index: 99;
-  background-color: @slider-input-color;
-  border-color: @slider-input-color;
-  width: 4px;
-  border-radius: 4px;
-}
 
 .slider-range__button {
   width: 40px;
   height: 40px;
-  position: absolute;
+  position: relative;
+  z-index: 99;
+  transform: translateX(-50%);
   top: 108px;
-  left: -18px;
+  left: 50%;
+  padding: 9px 6px;
   border-radius: 50%;
   background-color: #ffffff;
+  color: @slider-input-color;
   border: 2px solid @slider-input-color;
+  transform-style: preserve-3d;
+
+  @media (min-width: @tablet-width) {
+    top: 236px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    transform: translateZ(-1px);
+    width: 4px;
+    height: 256px;
+    top: -108px;
+    left: 16px;
+    border-radius: 4px;
+    background-color: #666666;
+    pointer-events: all;
+
+    @media (min-width: @tablet-width) {
+      top: -236px;
+      bottom: -236px;
+      height: 512px;
+    }
+  }
+
+  &:hover {
+    color: @primary-color;
+    border-color: @primary-color;
+
+    &::after {
+      background-color: @primary-color;
+    }
+  }
+
+  &:active {
+    color: rgba(94, 170, 47, 0.6);
+    border-color: rgba(94, 170, 47, 0.6);
+
+    &::after {
+      opacity: 0.6;
+      background-color: rgba(94, 170, 47,);
+    }
+  }
 }
