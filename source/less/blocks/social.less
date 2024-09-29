@@ -2,11 +2,11 @@
   display: flex;
   margin: 0;
   padding: 20px 74px;
+  padding-bottom: 18px;
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     width: 132px;
-    justify-content: space-between;
     padding: 8px 0;
   }
 }
@@ -17,17 +17,17 @@
 
 .social__link:focus {
   .social__svg {
-    fill: @primary-color;
+    color: @primary-color;
   }
 }
 
 .social__svg {
   display: block;
-  fill: #666666;
+  color: #666666;
 
   &:hover,
   &:focus {
-    fill: @primary-color;
+    color: @primary-color;
   }
 
   &:active {

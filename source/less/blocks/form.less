@@ -9,20 +9,30 @@
   padding-right: 20px;
   border-bottom: 1px solid @special-grey-2;
   padding-bottom: 24px;
+  padding-top: 0;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     border-bottom: none;
     padding: 0;
     margin: 0;
-    row-gap: 20px;
+    row-gap: 22px;
   }
 }
 
 .form__label {
   display: flex;
   flex-direction: row;
-  column-gap: 13px;
+  column-gap: 14px;
   position: relative;
+}
+
+.form__label--program-list {
+  column-gap: 15px;
+
+  @media (min-width: @tablet-width) {
+    column-gap: 20px;
+  }
 }
 
 .form__text {
@@ -37,6 +47,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 150%;
+    margin-bottom: -2px;
   }
 }
 
@@ -45,10 +56,11 @@
   border: none;
   flex-grow: 1;
   padding: 13px;
-  padding-left: 15px;
+  padding-top: 13.5px;
+  padding-left: 14px;
   background-color: @basic-white;
   // фиксированная ширина что-бы убрать минимальную внутреннюю ширину 165px
-  width: 173px;
+  width: 146px;
   // отключение кнопок input type="number" в firefox
   /* stylelint-disable-next-line */
   -moz-appearance: textfield;
@@ -80,16 +92,17 @@
 .form__program-field {
   padding-top: 22px;
   padding-bottom: 18px;
+  row-gap: 13px;
 
   @media (min-width: @tablet-width) {
     padding: 23px 27px 27px;
     border: 1px solid @special-grey-4;
+    row-gap: 12px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
-    row-gap: 13px;
     padding: 25px 28px;
   }
 }
@@ -97,8 +110,15 @@
 .form__textarea-input {
   border: 1px solid @special-grey-4;
   padding: 14px;
+  padding-bottom: 7px;
   width: 100%;
   white-space: wrap;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 9px;
+    padding-left: 20px;
+    height: 175px;
+  }
 }
 
 .form-list {
@@ -108,7 +128,7 @@
 
 .form-list__item {
   .list-style-reset ();
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -150,6 +170,17 @@
   font-size: 16px;
   line-height: 125%;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding-block: 14px;
+    font-size: 20px;
+    line-height: 130%;
+    width: calc(100% + 10px);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .form__head-container {
@@ -167,7 +198,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 66px;
-    padding-bottom: 72px;
+    padding-bottom: 74px;
   }
 
   @media (min-width: @desktop-width) {
@@ -189,11 +220,11 @@
 }
 
 .form__field-container--owner-data {
-  padding-top: 35px;
+  padding-top: 36px;
   padding-bottom: 24px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 76px;
+    padding-top: 77px;
     padding-bottom: 65px;
   }
 
@@ -213,16 +244,16 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 78px;
-    padding-bottom: 70px;
+    padding-bottom: 73px;
   }
 }
 
 .form__field-container--additional {
   padding-top: 34px;
-  padding-bottom: 34px;
+  padding-bottom: 21px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 57px;
+    padding-top: 59px;
     padding-bottom: 52px;
   }
 
@@ -289,6 +320,11 @@
 
   @media (min-width: @tablet-width) {
     column-gap: 20px;
+    min-width: 344px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 325px;
   }
 }
 
@@ -330,16 +366,16 @@
 .form-input-icon {
   border: @basic-black;
   position: absolute;
-  top: 15px;
-  right: 17.5px;
+  top: 14px;
+  right: 14px;
 
   @media (min-width: @tablet-width) {
-    top: 19.5px;
+    top: 18px;
   }
 }
 
 .form__input.form__input--valid + .form-input-icon {
-  stroke: @primary-color;
+  color: @primary-color;
 }
 
 .form__input.form__input--invalid,
@@ -347,5 +383,5 @@
   // если просто outline задать, то и у иконки он появляется
   outline-width: 2px;
   outline-color: #ff8282;
-  stroke: #ff8282;
+  color: #ff8282;
 }

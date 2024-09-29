@@ -2,6 +2,14 @@
 @tablet-width: 768px;
 @desktop-width: 1440px;
 
+// * {
+//   outline: 1px solid #ff6347;
+// }
+
+* {
+  box-sizing: border-box;
+}
+
 .page {
   height: 100%;
   position: relative;
@@ -37,10 +45,6 @@ img {
 svg {
   display: block;
   margin: 0;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .button {
@@ -116,7 +120,7 @@ svg {
   background-color: @primary-color;
   width: calc(100vw - 40px);
   left: 40px;
-  top: 16px;
+  top: 15px;
   transform: translateZ(-1px);
 
   @media (min-width: @tablet-width) {
@@ -128,5 +132,6 @@ svg {
   @media (min-width: @desktop-width) {
     width: 100vw;
     left: -70px;
+    top: 22px;
   }
 }
