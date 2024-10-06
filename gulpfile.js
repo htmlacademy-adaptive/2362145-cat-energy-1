@@ -8,8 +8,10 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import squoosh from 'gulp-libsquoosh';
+import terser from 'gulp-terser';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
+import del from 'del';
 
 // Styles
 
@@ -47,35 +49,38 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-
-export default gulp.series(
-  styles, server, watcher
-);
-
 // HTML
 
-export const html = () => {
+const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
+// Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'))
+}
+
 // Images
 
-export const optimizedImages = () => {
+const optimizedImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
 }
 
-export const copyImages = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
-export const createWebp = () => {
+const createWebp = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicon/**/*.{jpg,png}'])
   .pipe(
     squoosh({
@@ -86,13 +91,13 @@ export const createWebp = () => {
 
 // SVG
 
-export const svg = () => {
+const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'))
 }
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
   .pipe(svgo())
   .pipe(svgstore({
@@ -104,7 +109,7 @@ export const sprite = () => {
 
 // Copy
 
-export const copy = () => {
+const copy = () => {
   return gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
@@ -115,3 +120,52 @@ export const copy = () => {
   .pipe(gulp.dest('build'))
   done();
 }
+
+// Delete
+
+const clean = () => {
+  return del('build')
+};
+
+// Reload
+
+const reload = (done) => {
+  browser.reload()
+  done();
+}
+
+// Build
+
+export const build = gulp.series(
+  clean,
+  copy,
+  // optimizedImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp,
+  )
+)
+
+// Default
+
+export default gulp.series(
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp,
+  ),
+  gulp.series(
+    server,
+    watcher
+  )
+)
