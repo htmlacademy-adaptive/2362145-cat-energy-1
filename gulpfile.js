@@ -24,7 +24,7 @@ export const styles = () => {
       csso()
     ]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('build/css', { sourcemaps: true }))
     .pipe(browser.stream());
 }
 
@@ -139,7 +139,7 @@ const reload = (done) => {
 export const build = gulp.series(
   clean,
   copy,
-  // optimizedImages,
+  optimizedImages,
   gulp.parallel(
     styles,
     html,
