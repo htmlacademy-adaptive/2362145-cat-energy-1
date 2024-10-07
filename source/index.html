@@ -10,6 +10,9 @@
   <link rel="icon" type="image/svg+xml" href="img/favicon/favicon-32.svg">
   <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload"
+    href="img/hero/hero-background-cat_mobile.jpg, img/hero/hero-background-cat_mobile@2x.jpg, img/hero/hero-background-cat_mobile.webp, img/hero/hero-background-cat_mobile@2x.webp,"
+    as="image">
 </head>
 
 <body class="page__body">
@@ -65,7 +68,7 @@
         <img class="hero__image" srcset="img/hero/index-can_mobile.png 1x, img/hero/index-can_mobile@2x.png 2x"
           width="280" height="270" alt="Пачка фирменного корма">
       </picture>
-      <div class="hero__wrapper-with-background">
+      <div class="hero__wrapper-with-background" loading="eager">
         <div class="hero__background-image"></div>
       </div>
     </section>
@@ -128,7 +131,8 @@
       <div class="features__wrapper">
         <div class="features__description-wrapper">
           <p class="features__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
-            Energy Slim. Отличный результат<br> без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему
+            Energy Slim. Отличный результат<br> без изнуряющих тренировок! При этом он не менял своих привычек и
+            по-прежнему
             спит по 16 часов в день. </p>
           <div class="features__list-wrapper">
             <div class="features__list">
@@ -149,7 +153,7 @@
         </div>
         <div class="slider">
           <div class="slider__inner">
-            <div class="slider__picture slider__picture--before">
+            <div class="slider__picture slider__picture--before" loading="lazy">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/slider/slider-picture-before_tablet@1x.webp 1x, img/slider/slider-picture-before_tablet@2x.webp 2x"
@@ -165,7 +169,7 @@
                   alt="До нашего питания, упитанный котик.">
               </picture>
             </div>
-            <div class="slider__picture slider__picture--after">
+            <div class="slider__picture slider__picture--after" loading="lazy">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/slider/slider-picture-after_tablet@1x.webp 1x, img/slider/slider-picture-after_tablet@2x.webp 2x"
@@ -269,7 +273,7 @@
       </div>
     </div>
   </footer>
-  <script type="text/javascript" src="./js/app.js"></script>
+  <script type="text/javascript" src="./js/app.js" async></script>
 </body>
 
 </html>
