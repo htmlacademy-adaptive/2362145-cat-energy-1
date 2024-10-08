@@ -10,6 +10,9 @@
   <link rel="icon" type="image/svg+xml" href="img/favicon/favicon-32.svg">
   <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -90,7 +93,8 @@
             </fieldset>
           </div>
         </div>
-        <h2 class="section-form-title section-title section-title--line">Контактные данные<br> (владельца кота)</h2>
+        <h2 class="section-form-title section-title section-title--line">Контактные данные&nbsp;<br>(владельца кота)
+        </h2>
         <div class="form__field-container form__field-container--owner-data">
           <fieldset class="form__field form__contacts-field">
             <label class="form__label">
@@ -161,7 +165,7 @@
           <button class="form__button button" type="submit">Отправить заявку</button>
           <div class="selection-form-container__small">
             <p class="selection-form-container__legend">
-              *— Обязательные поля
+              * &ndash; Обязательные поля
             </p>
           </div>
         </div>
@@ -171,7 +175,10 @@
       <h2 class="visually-hidden">Наш адрес.</h2>
       <div class="contacts__location contacts__location--darken-background">
         <p class="contacts__text">Приглашаем<br> к сотрудничеству дилеров!</p>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</address>
+        <address class="contacts__address">
+          <span>ул. Большая Конюшенная, д. 19/8</span>
+          <span>Санкт-Петербург</span>
+        </address>
       </div>
       <iframe class="contacts__map map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625719791!2d30.32047247694084!3d59.93871916209402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1721517098673!5m2!1sru!2sru"
