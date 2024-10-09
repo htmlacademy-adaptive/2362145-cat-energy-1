@@ -283,10 +283,13 @@
 }
 
 .form__radio-input:hover + .form__radio-mark,
-.form__radio-input:focus + .form__radio-mark,
-.form__list-input:hover + .form__list-mark,
-.form__list-input:focus + .form__list-mark {
+.form__list-input:hover + .form__list-mark {
   border-color: #bababa;
+}
+
+.form__radio-input:focus + .form__radio-mark,
+.form__list-input:focus + .form__list-mark {
+  outline: 2px dotted #bababa;
 }
 
 .form__radio-input:checked + .form__radio-mark::after {
