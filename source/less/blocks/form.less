@@ -128,12 +128,12 @@
   }
 }
 
-.form-list {
+.form__list {
   margin: 0;
   padding: 0;
 }
 
-.form-list__item {
+.form__list-item {
   .list-style-reset ();
   margin: 0;
 }
@@ -322,7 +322,7 @@
   opacity: 0.3;
 }
 
-.form-list__label {
+.form__list-label {
   display: flex;
   max-width: 100%;
   column-gap: 15px;
@@ -368,12 +368,12 @@
   }
 }
 
-.form__list-input:disabled + .form-list__mark,
-.form__list-input:disabled ~ .form-list__text {
+.form__list-input:disabled + .form__list-mark,
+.form__list-input:disabled ~ .form__list-text {
   opacity: 0.3;
 }
 
-.form-input-icon {
+.form__input-icon {
   border: @basic-black;
   position: absolute;
   top: 14px;
@@ -384,12 +384,12 @@
   }
 }
 
-.form__input.form__input--valid + .form-input-icon {
+.form__input.form__input--valid + .form__input-icon {
   color: @primary-color;
 }
 
 .form__input.form__input--invalid,
-.form__input.form__input--invalid + .form-input-icon {
+.form__input.form__input--invalid + .form__input-icon {
   // если просто outline задать, то и у иконки он появляется
   outline-width: 2px;
   outline-color: #ff8282;
