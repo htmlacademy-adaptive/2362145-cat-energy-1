@@ -118,7 +118,6 @@ const copy = () => {
     base: 'source'
   })
   .pipe(gulp.dest('build'))
-  done();
 }
 
 // Delete
