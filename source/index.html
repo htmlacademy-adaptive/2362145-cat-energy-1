@@ -10,9 +10,6 @@
   <link rel="icon" type="image/svg+xml" href="img/favicon/favicon-32.svg">
   <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="preload"
-    href="img/hero/hero-background-cat_mobile.jpg, img/hero/hero-background-cat_mobile@2x.jpg, img/hero/hero-background-cat_mobile.webp, img/hero/hero-background-cat_mobile@2x.webp,"
-    as="image">
   <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
@@ -71,10 +68,10 @@
         <img class="hero__image" src="img/hero/index-can_mobile.png" srcset="img/hero/index-can_mobile@2x.png 2x"
           width="280" height="270" alt="Пачка фирменного корма">
       </picture>
-      <div class="hero__wrapper-with-background" loading="eager">
-        <div class="hero__background-image"></div>
-      </div>
     </section>
+    <div class="hero__wrapper-with-background">
+      <div class="hero__background-image"></div>
+    </div>
     <section class="selection">
       <h2 class="visually-hidden">Предлагаемые программы питания</h2>
       <ul class="selection__list">
@@ -155,7 +152,7 @@
         </div>
         <div class="slider">
           <div class="slider__inner">
-            <div class="slider__picture slider__picture--before" loading="lazy">
+            <div class="slider__picture slider__picture--before">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/slider/slider-picture-before_tablet@1x.webp 1x, img/slider/slider-picture-before_tablet@2x.webp 2x"
@@ -168,10 +165,10 @@
                   width="560" height="512">
                 <img class="slider__image slider__image--fat" src="img/slider/slider-picture-before_mobile@1x.png"
                   srcset="img/slider/slider-picture-before_mobile@2x.png 2x" width="280" height="256"
-                  alt="До нашего питания, упитанный котик.">
+                  alt="До нашего питания, упитанный котик." loading="lazy">
               </picture>
             </div>
-            <div class="slider__picture slider__picture--after" loading="lazy">
+            <div class="slider__picture slider__picture--after">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/slider/slider-picture-after_tablet@1x.webp 1x, img/slider/slider-picture-after_tablet@2x.webp 2x"
@@ -184,7 +181,7 @@
                   width="560" height="512">
                 <img class="slider__image slider__image--slim" src="img/slider/slider-picture-after_mobile@1x.png"
                   srcset="img/slider/slider-picture-after_mobile@2x.png 2x" width="280" height="256"
-                  alt="Результат питания, худенький котик.">
+                  alt="Результат питания, худенький котик." loading="lazy">
               </picture>
             </div>
             <button class="slider__range-button" type="button">
@@ -200,7 +197,7 @@
     </section>
     <section class="contacts">
       <h2 class="visually-hidden">Наш адрес.</h2>
-      <div class="contacts__location contacts__location--darken-background">
+      <div class="contacts__location">
         <p class="contacts__text">Приглашаем<br>к сотрудничеству дилеров!</p>
         <address class="contacts__address">
           <span>ул. Большая Конюшенная, д. 19/8</span>
